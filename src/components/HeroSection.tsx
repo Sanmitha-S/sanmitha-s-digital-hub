@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import profilePhoto from "@/assets/profile-photo.jpg";
 
 export const HeroSection = () => {
   const scrollToSection = (href: string) => {
@@ -29,22 +28,26 @@ export const HeroSection = () => {
           animate={{ scale: [1.2, 1, 1.2], opacity: [0.2, 0.4, 0.2] }}
           transition={{ duration: 10, repeat: Infinity }}
         />
+        <motion.div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl"
+          animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.2, 0.1] }}
+          transition={{ duration: 12, repeat: Infinity }}
+        />
       </div>
 
       <div className="container-custom relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="max-w-4xl mx-auto text-center">
           {/* Text Content */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center lg:text-left order-2 lg:order-1"
           >
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-primary font-medium mb-4"
+              className="text-primary font-medium mb-4 text-lg"
             >
               Hello, I'm
             </motion.p>
@@ -52,7 +55,7 @@ export const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-4"
+              className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-6"
             >
               Sanmitha S
             </motion.h1>
@@ -60,7 +63,7 @@ export const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-lg sm:text-xl text-muted-foreground mb-6"
+              className="text-xl sm:text-2xl text-muted-foreground mb-6"
             >
               <span className="gradient-text font-semibold">Computer Science Engineer</span>
               <br />
@@ -70,7 +73,7 @@ export const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="text-muted-foreground max-w-lg mx-auto lg:mx-0 mb-8"
+              className="text-muted-foreground max-w-2xl mx-auto mb-10 text-lg"
             >
               Passionate about leveraging data-driven technologies and building scalable
               systems to solve real-world problems. Committed to continuous learning
@@ -82,7 +85,7 @@ export const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="flex flex-wrap gap-4 justify-center lg:justify-start mb-8"
+              className="flex flex-wrap gap-4 justify-center mb-10"
             >
               <Button
                 size="lg"
@@ -106,7 +109,7 @@ export const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
-              className="flex gap-4 justify-center lg:justify-start"
+              className="flex gap-4 justify-center"
             >
               <a
                 href="https://linkedin.com"
@@ -131,48 +134,6 @@ export const HeroSection = () => {
                 <Mail className="w-5 h-5" />
               </a>
             </motion.div>
-          </motion.div>
-
-          {/* Profile Image */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="order-1 lg:order-2 flex justify-center"
-          >
-            <div className="relative">
-              <motion.div
-                className="absolute inset-0 bg-primary/20 rounded-full blur-2xl"
-                animate={{ scale: [1, 1.1, 1] }}
-                transition={{ duration: 4, repeat: Infinity }}
-              />
-              <motion.div
-                className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-background shadow-xl"
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.3 }}
-              >
-                <img
-                  src={profilePhoto}
-                  alt="Sanmitha S - Computer Science Engineer"
-                  className="w-full h-full object-cover"
-                />
-              </motion.div>
-              {/* Floating badges */}
-              <motion.div
-                className="absolute -right-4 top-1/4 glass-card rounded-lg px-3 py-2"
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 3, repeat: Infinity }}
-              >
-                <span className="text-sm font-medium">Data Analytics</span>
-              </motion.div>
-              <motion.div
-                className="absolute -left-4 bottom-1/4 glass-card rounded-lg px-3 py-2"
-                animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 3.5, repeat: Infinity }}
-              >
-                <span className="text-sm font-medium">Web Dev</span>
-              </motion.div>
-            </div>
           </motion.div>
         </div>
       </div>

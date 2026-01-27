@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import profilePhoto from "@/assets/profile-photo.jpg";
 
 export const HeroSection = () => {
   const scrollToSection = (href: string) => {
@@ -43,10 +44,29 @@ export const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
+            {/* Profile Photo */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="mb-8"
+            >
+              <div className="relative inline-block">
+                <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden border-4 border-primary/50 shadow-lg shadow-primary/20">
+                  <img
+                    src={profilePhoto}
+                    alt="Sanmitha S"
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <div className="absolute inset-0 rounded-full border-4 border-primary/20 animate-pulse-glow" />
+              </div>
+            </motion.div>
+
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
+              transition={{ delay: 0.3 }}
               className="text-primary font-medium mb-4 text-lg"
             >
               Hello, I'm

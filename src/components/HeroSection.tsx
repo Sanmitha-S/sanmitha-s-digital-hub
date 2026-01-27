@@ -49,14 +49,14 @@ export const HeroSection = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.5 }}
-              className="mb-8"
+              className="mb-6"
             >
               <div className="relative inline-block">
-                <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden border-4 border-primary/50 shadow-lg shadow-primary/20">
+                <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-primary/50 shadow-lg shadow-primary/20">
                   <img
                     src={profilePhoto}
                     alt="Sanmitha S"
-                    className="w-full h-full object-cover object-top"
+                    className="w-full h-full object-cover object-center"
                   />
                 </div>
                 <div className="absolute inset-0 rounded-full border-4 border-primary/20 animate-pulse-glow" />
@@ -132,7 +132,7 @@ export const HeroSection = () => {
               className="flex gap-4 justify-center"
             >
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/sanmitha-s-aa81372a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
@@ -140,7 +140,7 @@ export const HeroSection = () => {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/Sanmitha-S"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-300"

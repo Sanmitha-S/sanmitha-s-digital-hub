@@ -22,14 +22,14 @@ const contactInfo = [
   {
     icon: Linkedin,
     label: "LinkedIn",
-    value: "Connect with me",
-    href: "https://linkedin.com",
+    value: "linkedin.com/in/sanmitha-s-aa81372a3",
+    href: "https://www.linkedin.com/in/sanmitha-s-aa81372a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
     icon: Github,
     label: "GitHub",
-    value: "View my repos",
-    href: "https://github.com",
+    value: "github.com/Sanmitha-S",
+    href: "https://github.com/Sanmitha-S",
   },
 ];
 

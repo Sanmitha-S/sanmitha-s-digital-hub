@@ -16,7 +16,7 @@ export const Footer = () => {
 
           <div className="flex items-center gap-4">
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/sanmitha-s-aa81372a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -24,7 +24,7 @@ export const Footer = () => {
               <Linkedin className="w-5 h-5" />
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/Sanmitha-S"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
